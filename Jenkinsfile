@@ -1,5 +1,5 @@
 node{
-   stage('SCM Checkout')
+   stage('SCM Checkout'){
      git branch: 'main', credentialsId: 'Git', url: 'https://github.com/Nov202/Docker-image'
    }
    stage('Docker build image'){

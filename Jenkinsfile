@@ -3,7 +3,6 @@ node{
      git branch: 'main', credentialsId: 'Git', url: 'https://github.com/Nov202/Docker-image'
    }
    stage('Docker build image'){
-     sh 'sudo chown jenkins:jenkins /var/run/docker.sock'
      sh 'docker build -t umar0890/myappache5 .'
    }
    stage('Docker login'){

@@ -3,12 +3,12 @@ node{
      git branch: 'main', credentialsId: 'Git', url: 'https://github.com/Nov202/Docker-image'
    }
    stage('Docker build image'){
-     sh 'docker build -t umar0890/myappache5 .'
+     sh 'docker build -t image name .'
    }
    stage('Docker login'){
      withCredentials([string(credentialsId: 'dockerhub-app', variable: 'Dockerhubapp')]) {
-     sh "docker login -u umar0890 -p ${Dockerhubapp}"
+     sh "docker login -u  -p "
    }
-     sh 'docker push umar0890/myappache5'
+     sh 'docker push image name'
    }
 }
